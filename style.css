@@ -1,0 +1,102 @@
+/* 전체 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 제목 스타일 */
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* 버튼 스타일 */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .symbol-btn,
+  .number-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .symbol-btn.active {
+    background-color: #008CBA;
+  }
+  
+  .number-btn.active {
+    background-color: #008CBA;
+  }
+
+  /* 원소 기호 및 번호 표시 영역 스타일 */
+  .display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  #display {
+    font-size: 80px;
+    font-weight: bold;
+  }
+  
+  #display-number {
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* 입력 상자 스타일 */
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* 확인 버튼 스타일 */
+  #check-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  #check-btn:hover {
+    background-color: #008CBA;
+  }
+  
+  /* 미디어 쿼리 */
+  @media screen and (max-width: 600px) {
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
