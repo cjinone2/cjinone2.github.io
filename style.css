@@ -100,3 +100,30 @@ body {
       align-items: center;
     }
   }
+
+
+
+  .scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .correct,
+  .wrong {
+    font-size: 70px;
+    font-weight: bold;
+  }
+  
+  .correct {
+    color : blue;
+  }
+
+  .wrong {
+    color : red;
+  }
+  #correct-count,
+  #wrong-count {
+    margin-left: 5px;
+  }
