@@ -1,5 +1,3 @@
-
-
 let data = {};
 fetch("https://raw.githubusercontent.com/cjinone2/cjinone2.github.io/main/data.json")
     .then(response => response.json())
