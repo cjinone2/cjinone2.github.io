@@ -37,13 +37,13 @@ function activateSymbolMode() {
 function shake(){
     if (mode == "Number"){
         const keys = Object.keys(data);
-        const randomIndex = Math.floor(Math.random() * keys.length);
+        const randomIndex = Math.floor(Math.random() * 40);
         const number = keys[randomIndex];
         const display = document.querySelector('#display');
         display.textContent = number;
     } else {
         const values = Object.values(data);
-        const randomIndex = Math.floor(Math.random() * values.length);
+        const randomIndex = Math.floor(Math.random() * 40);
         const symbol = values[randomIndex];
         const display = document.querySelector('#display');
         display.textContent = symbol;
