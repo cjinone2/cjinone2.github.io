@@ -56,6 +56,33 @@ function check(){
     const answerBox = document.querySelector('#answer-box');
     const answer = answerBox.value;
 
-    console.log(data[3]);
-
+    const correctBox = document.querySelector('#correct-count');
+    const wrongBox = document.querySelector('#wrong-count');
+    
+    if (mode == "Number"){
+        const display = document.querySelector("#display");
+        const number = display.textContent
+        if (answer == data[number]){
+            answerBox.value = '';
+            correctBox.textContent++;
+            shake();
+        } else{
+            answerBox.value = '';
+            wrongBox.textContent++;
+            shake();
+        }
+    } else {
+        const display = document.querySelector("#display");
+        const symbol = display.textContent
+        if (symbol == data[answer]){
+            answerBox.value = '';
+            correctBox.textContent++;
+            shake();
+        } else {
+            answerBox.value = '';
+            wrongBox.textContent++;
+            shake();
+        }
+    }
+    
 }
