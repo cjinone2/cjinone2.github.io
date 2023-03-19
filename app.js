@@ -1,30 +1,11 @@
-const data = {
-    1 : "H",
-    2 : "He",
-    3 : "Li",
-    4 : "Be",
-    5 : "B",
-    6 : "C",
-    7 : "N",
-    8 : "O",
-    9 : "Al",
-}
 
-const data2 = ["H",
-                "He",
-                "Li",
-                "Be",
-                "B",
-                "C",
-                "N",
-                "O",
-                "Al",
-                "Cu",
-                "P",
-                "S",
-                "Cl",
 
-]
+let data = {};
+fetch("https://raw.githubusercontent.com/cjinone2/cjinone2.github.io/main/data.json")
+    .then(response => response.json())
+    .then(jsonData => {
+        data = jsonData
+    })
 
 let mode = "Symbol";
 
@@ -57,14 +38,15 @@ function activateSymbolMode() {
 
 function shake(){
     if (mode == "Number"){
-        const randomIndex = Math.floor(Math.random() * data2.length);
+        const keys = Object.keys(data);
+        const randomIndex = Math.floor(Math.random() * keys.length);
+        const number = keys[randomIndex];
         const display = document.querySelector('#display');
-        display.textContent = randomIndex;
+        display.textContent = number;
     } else {
         const values = Object.values(data);
         const randomIndex = Math.floor(Math.random() * values.length);
         const symbol = values[randomIndex];
-
         const display = document.querySelector('#display');
         display.textContent = symbol;
     }
