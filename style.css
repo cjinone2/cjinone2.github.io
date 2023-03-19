@@ -127,3 +127,31 @@ body {
   #wrong-count {
     margin-left: 5px;
   }
+
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .key {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+
+  .key:hover {
+    background-color: #008CBA;
+  }

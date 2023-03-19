@@ -84,3 +84,11 @@ function check(){
     }
     
 }
+
+function addValue(value) {
+    document.getElementById("answer-box").value += value;
+}
+
+function remove(){
+    document.getElementById("answer-box").value = "";
+}
