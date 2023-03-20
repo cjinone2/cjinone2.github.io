@@ -112,8 +112,11 @@ body {
   
   .correct,
   .wrong {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
+    white-space: nowrap;
+    margin-right: 10px;
+    padding: 10px;
   }
   
   .correct {
@@ -132,8 +135,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
     margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   
   .key {
@@ -150,8 +155,6 @@ body {
     cursor: pointer;
   }
   
-
-
   .key:hover {
     background-color: #008CBA;
   }

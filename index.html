@@ -2,38 +2,41 @@
 <html>
 <head>
 	<title>화학 주기율표 외우기</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<h1>화학 주기율표 외우기</h1>
-	<div class="buttons">
-		<button class="symbol-btn active" onclick="activateSymbolMode()">원소기호 모드</button>
-		<button class="number-btn" onclick="activateNumberMode()">원소번호 모드</button>
+	<div>
+		<div class="buttons">
+			<button class="symbol-btn active" onclick="activateSymbolMode()">원소기호 모드</button>
+			<button class="number-btn" onclick="activateNumberMode()">원소번호 모드</button>
+		</div>
 	</div>
 	<div class="display">
 		<span id="display">H</span>
 	</div>
 	<input type="text" id="answer-box" placeholder="정답을 입력하세요">
 	<button id="check-btn" onclick="check()">확인</button>
+	<div class="keypad">
+		<button class="key" onclick="addValue('1')">1</button>
+		<button class="key" onclick="addValue('2')">2</button>
+		<button class="key" onclick="addValue('3')">3</button>
+		<button class="key" onclick="addValue('4')">4</button>
+		<button class="key" onclick="addValue('5')">5</button>
+		<button class="key" onclick="addValue('6')">6</button>
+		<button class="key" onclick="addValue('7')">7</button>
+		<button class="key" onclick="addValue('8')">8</button>
+		<button class="key" onclick="addValue('9')">9</button>
+		<button class="key">#</button>
+		<button class="key" onclick="addValue('0')">0</button>
+		<button class="key" onclick="remove()">*</button>
+	  </div>
+	<div class="wrong">
     <div class="scoreboard">
         <div class="correct">
           <span id="correct-count">0</span>
         </div>
-		<div class="keypad">
-			<button class="key" onclick="addValue('1')">1</button>
-			<button class="key" onclick="addValue('2')">2</button>
-			<button class="key" onclick="addValue('3')">3</button>
-			<button class="key" onclick="addValue('4')">4</button>
-			<button class="key" onclick="addValue('5')">5</button>
-			<button class="key" onclick="addValue('6')">6</button>
-			<button class="key" onclick="addValue('7')">7</button>
-			<button class="key" onclick="addValue('8')">8</button>
-			<button class="key" onclick="addValue('9')">9</button>
-			<button class="key">연우</button>
-			<button class="key" onclick="addValue('0')">0</button>
-			<button class="key" onclick="remove()">내꺼</button>
-		  </div>
         <div class="wrong">
           <span id="wrong-count">0</span>
         </div>
